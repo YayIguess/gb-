@@ -1,41 +1,39 @@
 #include <iostream>
-#include <fstream>
-#include <iomanip>
 #include <filesystem>
 #include <string>
 
 #include "cpu.h"
 #include "ppu.h"
-#include <SDL2/SDL.h>
 
 using namespace std;
 namespace fs = std::filesystem;
 
 string path;
 CPU_ Z80;
+PPU SCREEN;
 
-int main(int argc, char *argv[]) {
+int main() {
   Z80.INIT_PC();
-  SETUP();
-
-  path = "../games/tetris.gb";
-//path = "../bootroms/dmg_boot.bin";
+  SCREEN.RUN();
+/*
+  //path = "../games/tetris.gb";
+  path = "../bootroms/dmg_boot.bin";
 
   ifstream BootRom;
   BootRom.open(path, ios::binary);
   int size = fs::file_size(path);
-  //if(size == 256)
-  //{
+  if(size == 256)
+  {
     Z80.LOAD_BOOTROM(BootRom, size);
-  //}
-  //else
-  //{
- //   cout << "Bootrom was an unexpected size!\nQuitting!" << endl;
- //   exit(1);
-  //}
-  //BootRom.close();
+  }
+  else
+  {
+    cout << "Bootrom was an unexpected size!\nQuitting!" << endl;
+    exit(1);
+  }
+  BootRom.close();
 
-  Z80.RUN();
+  Z80.RUN();*/
 
   return 0;
 }
