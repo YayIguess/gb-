@@ -1,7 +1,7 @@
 # gb++
 Gameboy emulator written in cpp using a vulkan renderer
 
-WIP - no games currently load as the Vulkan rendered is not complete
+WIP - no games currently load as the Vulkan renderer is not complete
 
 # TODO
 * Finish Vulkan Renderer
